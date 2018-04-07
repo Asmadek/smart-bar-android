@@ -1,12 +1,12 @@
-package com.innopolis.zelenyichai.smartbar;
+package com.innopolis.zelenyichai.smartbar.Activity;
 
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+
+import com.innopolis.zelenyichai.smartbar.Fragment.AssistentFragment;
+import com.innopolis.zelenyichai.smartbar.R;
 
 public class StartActivity extends Activity {
 

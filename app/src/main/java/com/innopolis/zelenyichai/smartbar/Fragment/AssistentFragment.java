@@ -1,4 +1,4 @@
-package com.innopolis.zelenyichai.smartbar;
+package com.innopolis.zelenyichai.smartbar.Fragment;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.innopolis.zelenyichai.smartbar.Activity.DesicionActivity;
+import com.innopolis.zelenyichai.smartbar.R;
 
 public class AssistentFragment extends Fragment implements View.OnClickListener {
 
@@ -43,7 +46,7 @@ public class AssistentFragment extends Fragment implements View.OnClickListener 
     public void onClick(View v) {
         Intent intent = new Intent(getActivity(), DesicionActivity.class);
         intent.putExtra("name", assistantName);
-        intent.putExtra("imageId", imageId);
+        intent.putExtra("id", imageId);
         startActivity(intent);
     }
 }

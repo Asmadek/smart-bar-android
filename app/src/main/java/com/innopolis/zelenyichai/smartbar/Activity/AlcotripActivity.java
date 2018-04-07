@@ -1,10 +1,11 @@
-package com.innopolis.zelenyichai.smartbar;
+package com.innopolis.zelenyichai.smartbar.Activity;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
-public class BarActivity extends AppCompatActivity {
+import com.innopolis.zelenyichai.smartbar.R;
 
+public class AlcotripActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

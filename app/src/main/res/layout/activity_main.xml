@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartActivity">
+    tools:context=".Activity.StartActivity">
 
     <android.support.constraint.Guideline
         android:id="@+id/guidline_start_top"
@@ -44,7 +44,7 @@
         android:elevation="8dp">
         <fragment
             android:id="@+id/fragment_assistant1"
-            android:name="com.innopolis.zelenyichai.smartbar.AssistentFragment"
+            android:name="com.innopolis.zelenyichai.smartbar.Fragment.AssistentFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             />
@@ -64,7 +64,7 @@
             android:id="@+id/fragment_assistant2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.innopolis.zelenyichai.smartbar.AssistentFragment"
+            android:name="com.innopolis.zelenyichai.smartbar.Fragment.AssistentFragment"
             />
     </android.support.v7.widget.CardView>
 
@@ -79,7 +79,7 @@
         android:layout_margin="3dp">
         <fragment
             android:id="@+id/fragment_assistant3"
-            android:name="com.innopolis.zelenyichai.smartbar.AssistentFragment"
+            android:name="com.innopolis.zelenyichai.smartbar.Fragment.AssistentFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             />
