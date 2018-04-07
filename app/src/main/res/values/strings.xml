@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SMART BAR</string>
+    <string name="btn_action_bar">БАР</string>
+    <string name="btn_action_alcotrip">АЛКОТРИП</string>
 </resources>
