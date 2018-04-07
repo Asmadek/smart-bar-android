@@ -3,10 +3,12 @@ package com.innopolis.zelenyichai.smartbar;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
-public class StartActivity extends Activity{
+public class StartActivity extends Activity {
 
     private FragmentManager fragmentManager;
     private AssistentFragment assistentFragment;
@@ -48,4 +50,5 @@ public class StartActivity extends Activity{
         fragmentTransaction.add(R.id.fragment_assistant3, assistentFragment);
         fragmentTransaction.commit();
     }
+
 }
