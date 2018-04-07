@@ -2,4 +2,6 @@
     <string name="app_name">SMART BAR</string>
     <string name="btn_action_bar">БАР</string>
     <string name="btn_action_alcotrip">АЛКОТРИП</string>
+    <string name="btn_view_map">Карта</string>
+    <string name="btn_view_list">Список</string>
 </resources>
