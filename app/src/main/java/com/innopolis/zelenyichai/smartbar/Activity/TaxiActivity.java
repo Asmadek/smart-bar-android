@@ -36,7 +36,7 @@ public class TaxiActivity extends Activity implements View.OnClickListener{
         fragmentTransaction.add(R.id.fragment_chat, chatFragment);
         fragmentTransaction.commit();
         chatFragment.addMessages((ArrayList<BaseMessage>) getIntent().getExtras().getSerializable("log"));
-        chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Elon Mask"), "Может закажем такси?");
+        chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Илон Маск"), "Может закажем такси?");
     }
 
     private Bundle composeBundle(int id, String name){

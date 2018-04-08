@@ -40,7 +40,7 @@ public class BarActivity extends Activity implements View.OnClickListener{
         fragmentTransaction.add(R.id.fragment_bar_chat, chatFragment);
         fragmentTransaction.commit();
         chatFragment.addMessages((ArrayList<BaseMessage>) getIntent().getExtras().getSerializable("log"));
-        chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Elon Mask"), "В какой бар пойдем?");
+        chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Илон Маск"), "В какой бар пойдем?");
         cardView = findViewById(R.id.barlist_card);
         BarListFragment barListFragment = (BarListFragment) fragmentManager.findFragmentById(R.id.fragment_bar_list);
         barListFragment.setMessageList(chatFragment.getMessageList());

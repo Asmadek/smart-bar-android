@@ -42,7 +42,7 @@ public class DrinkActivity extends Activity implements View.OnClickListener {
         fragmentTransaction.add(R.id.fragment_bar_chat, chatFragment);
         fragmentTransaction.commit();
         chatFragment.addMessages((ArrayList<BaseMessage>)getIntent().getExtras().getSerializable("log"));
-        chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Elon Mask"),"I advise you to start with my signature cocktail: Tesla Rocket.");
+        chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Илон Маск"),"Я советую начать с моего фирменного коктейля: Комический Тесла.");
         buildDrinks();
     }
 
@@ -55,8 +55,8 @@ public class DrinkActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_order:
-                chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Elon Mask"), "Отличный выбор!");
-                chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Elon Mask"), "Полёт нормальный :)");
+                chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Илон Маск"), "Отличный выбор!");
+                chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Илон Маск"), "Полёт нормальный :)");
                 break;
         }
     }

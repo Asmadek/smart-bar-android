@@ -32,7 +32,7 @@ public class DesicionActivity extends Activity implements View.OnClickListener{
         chatFragment = new ChatFragment();
         fragmentTransaction.add(R.id.fragment_chat, chatFragment);
         fragmentTransaction.commit();
-        chatFragment.addMessage(getIntent().getExtras(), "It is time for some alco science!");
+        chatFragment.addMessage(getIntent().getExtras(), "Время для алконауки!");
     }
 
     private Bundle composeBundle(int id, String name){
@@ -52,13 +52,13 @@ public class DesicionActivity extends Activity implements View.OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.btn_alcotrip:
-                chatFragment.addMessage(composeBundle(1, "you"), "Alcotrip!");
+                chatFragment.addMessage(composeBundle(1, "you"), "Алкотрип!");
                 intent = new Intent(this, AlcoActivity.class);
                 intent.putExtra("log", chatFragment.getMessageList());
                 startActivity(intent);
                 break;
             case R.id.btn_friends:
-                chatFragment.addMessage(composeBundle(1, "you"), "Надо кого-то позвать");
+                chatFragment.addMessage(composeBundle(1, "you"), "Надо позвать друзей");
                 intent = new Intent(this, FriendsActivity.class);
                 intent.putExtra("log", chatFragment.getMessageList());
                 startActivity(intent);

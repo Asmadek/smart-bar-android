@@ -46,22 +46,22 @@ public class DrinksFragment extends Fragment implements View.OnClickListener{
         baseMessage1.setMessage("Жахнем твой коктейль!");
         chatFragment.addMessage(baseMessage1);
         if(counter < 2){
-            baseMessage2.setSender("Elon Musk");
+            baseMessage2.setSender("Илон Маск");
             baseMessage2.setMessage("Отличный выбор!");
             baseMessage2.setGetImageId(R.mipmap.elon_round);
             chatFragment.addMessage(baseMessage2);
             baseMessage3.setMessage("Полёт нормальный!");
             baseMessage3.setGetImageId(R.mipmap.elon_round);
-            baseMessage3.setSender("Elon Musk");
+            baseMessage3.setSender("Илон Маск");
             chatFragment.addMessage(baseMessage3);
             counter++;
         } else {
-            baseMessage2.setSender("Elon Musk");
+            baseMessage2.setSender("Илон Маск");
             baseMessage2.setMessage("Неплохой выбор.");
             baseMessage2.setGetImageId(R.mipmap.elon_round);
             chatFragment.addMessage(baseMessage2);
             baseMessage3.setMessage("Но, думаю, твой топливный бак на сегодня заполнен. Еще стаканчик и ты рискуешь увидеть марсиан ;)");
-            baseMessage3.setSender("Elon Musk");
+            baseMessage3.setSender("Илон Маск");
             baseMessage3.setGetImageId(R.mipmap.elon_round);
             chatFragment.addMessage(baseMessage3);
         }

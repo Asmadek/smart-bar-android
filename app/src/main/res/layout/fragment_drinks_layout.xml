@@ -44,7 +44,7 @@
                         android:layout_marginTop="2dp"/>
                     <TextView
                         android:id="@+id/longisland_name"
-                        android:text="Tesla Rocket"
+                        android:text="Космичееский Тесла"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
@@ -97,7 +97,7 @@
                         />
                     <TextView
                         android:id="@+id/wcola_name"
-                        android:text="Whisky Cola"
+                        android:text="Виски - Кола"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
@@ -150,7 +150,7 @@
                          />
                     <TextView
                         android:id="@+id/moji_name"
-                        android:text="Mojito"
+                        android:text="Мохито"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
@@ -204,7 +204,7 @@
                         />
                     <TextView
                         android:id="@+id/vmar_name"
-                        android:text="Vodka - Martini"
+                        android:text="Водка - Мартини"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
@@ -257,7 +257,7 @@
                         android:src="@mipmap/pc_round"/>
                     <TextView
                         android:id="@+id/pc_name"
-                        android:text="Pina Colada"
+                        android:text="Пина Колада"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
@@ -278,7 +278,7 @@
                         app:layout_constraintTop_toBottomOf="@id/pc_name"
                         app:layout_constraintLeft_toLeftOf="@id/pc_guid"
                         app:layout_constraintRight_toRightOf="parent"
-                        android:text="Typically made with vodka, tequila, light rum, triple sec, gin, and a splash of cola, which gives the drink the same amber hue as its namesake"
+                        android:text="традиционный карибский алкогольный коктейль на основе светлого рома, с кокосовым молоком и ананасовым соком. "
                         android:textSize="12sp"/>
                 </android.support.constraint.ConstraintLayout>
             </android.support.v7.widget.CardView>
