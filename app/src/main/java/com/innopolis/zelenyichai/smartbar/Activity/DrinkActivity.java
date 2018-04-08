@@ -34,8 +34,6 @@ public class DrinkActivity extends Activity implements View.OnClickListener {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drink);
-        Button orderButton = findViewById(R.id.btn_order);
-        orderButton.setOnClickListener(this);
         bundle = new Bundle();
         totalAmount = new BigDecimal(BigInteger.ZERO);
         fragmentManager = getFragmentManager();
