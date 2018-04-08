@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".Activity.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,11 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.DesicionActivity"></activity>
+        <activity android:name=".Activity.DesicionActivity" />
         <activity android:name=".Activity.BarActivity" />
         <activity android:name=".Activity.AlcotripActivity" />
-        <activity android:name=".Activity.TaxiActivity"></activity>
-        <activity android:name=".Activity.DrinkActivity"></activity>
+        <activity android:name=".Activity.TaxiActivity" />
+        <activity android:name=".Activity.DrinkActivity" />
+        <activity android:name=".Activity.UserProfileActivity"></activity>
     </application>
 
 </manifest>
