@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidline_alco_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidline_alco_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_chat_alco"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guidline_alco_top"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:padding="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginVertical="8dp">
+
+        <fragment
+            android:id="@+id/fragment_alco_chat"
+            android:name="com.innopolis.zelenyichai.smartbar.Fragment.ChatFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_list"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/guidline_alco_top"
+        app:layout_constraintBottom_toBottomOf="@id/guidline_alco_bottom"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginVertical="8dp">
+
+        <fragment
+            android:id="@+id/fragment_alco"
+            android:name="com.innopolis.zelenyichai.smartbar.Fragment.AlcoFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_drink_order"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/guidline_alco_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginVertical="8dp">
+
+        <Button
+            android:id="@+id/btn_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Let's GO!"
+            android:background="#ffffff"/>
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

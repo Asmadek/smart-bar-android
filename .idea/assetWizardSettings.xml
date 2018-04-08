@@ -16,10 +16,26 @@
                             <entry key="launcher">
                               <value>
                                 <PersistentState>
+                                  <option name="children">
+                                    <map>
+                                      <entry key="foregroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="scalingPercent" value="87" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="foregroundImage" value="C:\Users\mjazz\Downloads\zayac.jpg" />
-                                      <entry key="outputName" value="zayac" />
+                                      <entry key="backgroundImage" value="C:\Users\mjazz\Downloads\Telegram Desktop\rocket.jpg" />
+                                      <entry key="foregroundImage" value="C:\Users\mjazz\Downloads\Telegram Desktop\vmar.jpg" />
+                                      <entry key="outputName" value="vmar" />
                                     </map>
                                   </option>
                                 </PersistentState>

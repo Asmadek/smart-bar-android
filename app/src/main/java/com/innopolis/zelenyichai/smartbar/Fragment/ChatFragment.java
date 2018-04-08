@@ -56,4 +56,9 @@ public class ChatFragment extends Fragment {
         messageList = log;
         mMessageAdapter.notifyDataSetChanged();
     }
+
+    public void addMessage(BaseMessage baseMessage) {
+        messageList.add(baseMessage);
+        mMessageAdapter.notifyDataSetChanged();
+    }
 }

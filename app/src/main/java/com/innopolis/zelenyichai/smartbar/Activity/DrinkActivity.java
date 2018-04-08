@@ -28,6 +28,7 @@ public class DrinkActivity extends Activity implements View.OnClickListener {
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private BigDecimal totalAmount;
+    int counter = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,34 +39,26 @@ public class DrinkActivity extends Activity implements View.OnClickListener {
         bundle = new Bundle();
         totalAmount = new BigDecimal(BigInteger.ZERO);
         fragmentManager = getFragmentManager();
-        buildDrinks();
-
         chatFragment = new ChatFragment();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.fragment_bar_chat, chatFragment);
         fragmentTransaction.commit();
         chatFragment.addMessages((ArrayList<BaseMessage>)getIntent().getExtras().getSerializable("log"));
-        chatFragment.addMessage(getIntent().getExtras(), "Let us start with my signature cocktail: Tesla Rocket");
+        chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Elon Mask"),"I advise you to start with my signature cocktail: Tesla Rocket.");
+        buildDrinks();
     }
 
     private void buildDrinks() {
-        fragmentTransaction = fragmentManager.beginTransaction();
-        DrinksFragment drinksFragment = new DrinksFragment();
-        fragmentTransaction.add(R.id.fragment_drinks, drinksFragment);
-        fragmentTransaction.commit();
+        DrinksFragment drinksFragment = (DrinksFragment) fragmentManager.findFragmentById(R.id.fragment_drinks);
+        drinksFragment.setMessageList(chatFragment.getMessageList());
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_order:
-                // TODO в зависимости от того, какой коктейл выбрал, менять сообщение
-                showOrderMessage("Заказ отправлен...");
-                // TODO необходимо собирать итоговую сумму, в случае нескольких выбранных напитков
-                totalAmount.add(new BigDecimal(279));
-                TextView totalAmount = findViewById(R.id.total_amount);
-                totalAmount.setText(totalAmount + " rub");
-                chatFragment.addMessage(getIntent().getExtras(), "Красава ваще!!!");
+                chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Elon Mask"), "Отличный выбор!");
+                chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Elon Mask"), "Полёт нормальный :)");
                 break;
         }
     }
@@ -74,5 +67,12 @@ public class DrinkActivity extends Activity implements View.OnClickListener {
         Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
         toast.setGravity(CENTER, 0, 0);
         toast.show();
+    }
+
+
+    private Bundle composeBundle(int id, String name){
+        bundle.putInt("id", id);
+        bundle.putString("name", name);
+        return bundle;
     }
 }

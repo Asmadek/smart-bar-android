@@ -51,7 +51,7 @@ public class DesicionActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.btn_alcotrip:
                 chatFragment.addMessage(composeBundle(1, "you"), "Alcotrip!");
-                intent = new Intent(this, AlcotripActivity.class);
+                intent = new Intent(this, AlcoActivity.class);
                 intent.putExtra("log", chatFragment.getMessageList());
                 startActivity(intent);
                 break;
