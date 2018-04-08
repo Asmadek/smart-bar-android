@@ -29,7 +29,10 @@ public class ChatFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_chat_layout, container, false);
         mMessageRecycler = (RecyclerView) view.findViewById(R.id.reyclerview_message_list);
         mMessageAdapter = new MessageListAdapter(getActivity(), messageList);
-        mMessageRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        // auto-scroll
+        layoutManager.setStackFromEnd(true);
+        mMessageRecycler.setLayoutManager(layoutManager);
         mMessageRecycler.setAdapter(mMessageAdapter);
         return view;
     }
