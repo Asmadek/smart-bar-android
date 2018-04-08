@@ -13,8 +13,7 @@ import com.innopolis.zelenyichai.smartbar.Fragment.ChatFragment;
 import com.innopolis.zelenyichai.smartbar.Fragment.DrinksFragment;
 import com.innopolis.zelenyichai.smartbar.R;
 
-import static android.widget.Toast.makeText;
-
+import static android.view.Gravity.CENTER;
 public class DrinkActivity extends Activity implements View.OnClickListener {
 
     private Bundle bundle;
@@ -51,9 +50,15 @@ public class DrinkActivity extends Activity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.btn_order:
                 // TODO в зависимости от того, какой коктейл выбрал, менять сообщение
-                makeText(getApplicationContext(), "Заказ отправлен...", Toast.LENGTH_SHORT);
+                showOrderMessage("Заказ отправлен...");
                 chatFragment.addMessage(getIntent().getExtras(), "Красава ваще!!!");
                 break;
         }
+    }
+
+    private void showOrderMessage(final String message) {
+        Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
+        toast.setGravity(CENTER, 0, 0);
+        toast.show();
     }
 }
