@@ -60,5 +60,7 @@ public class ChatFragment extends Fragment {
     public void addMessage(BaseMessage baseMessage) {
         messageList.add(baseMessage);
         mMessageAdapter.notifyDataSetChanged();
+        if (mMessageRecycler != null && messageList != null)
+            mMessageRecycler.scrollToPosition(messageList.size() - 1);
     }
 }
