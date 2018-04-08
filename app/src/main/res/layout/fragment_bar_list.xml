@@ -1,10 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    
-    <android.support.v7.widget.CardView
-        android:layout_width=""
-        android:layout_height=""></android.support.v7.widget.CardView>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_108"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="4dp"
+                >
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp">
+                    <TextView
+                        android:id="@+id/tv_bar_name_108"
+                        android:text="Bar 108"
+                        android:textSize="40sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="right"
+                        />
+                    <TextView
+                        android:id="@+id/description_108"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_bar_name_108"
+                        android:gravity="right"
+                        android:text="THE ONLY BAR IN INNOPOLIS"/>
+                    <TextView
+                        android:id="@+id/tv_avg_check_108"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/description_108"
+                        android:gravity="right"
+                        android:text="Average check: 700 руб."/>
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_trinity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="4dp"
+                >
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp">
+                    <TextView
+                        android:id="@+id/tv_bar_name_trinity"
+                        android:text="Trinity Pub"
+                        android:textSize="40sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="right"
+                        />
+                    <TextView
+                        android:id="@+id/description_trinity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_bar_name_trinity"
+                        android:gravity="right"
+                        android:text="Coziest Irish Pub in Chertanovo"/>
+                    <TextView
+                        android:id="@+id/tv_avg_check_trinity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/description_trinity"
+                        android:gravity="right"
+                        android:text="Average check: 1000 руб."/>
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_NY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="4dp"
+                >
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp">
+                    <TextView
+                        android:id="@+id/tv_bar_name_ny"
+                        android:text="Harry's NY Bar"
+                        android:textSize="40sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="right"
+                        />
+                    <TextView
+                        android:id="@+id/description_ny"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_bar_name_ny"
+                        android:gravity="right"
+                        android:text=" New York-style interior – mahogany panels, college pennants and best booze in Moscow"/>
+                    <TextView
+                        android:id="@+id/tv_avg_check_ny"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/description_ny"
+                        android:gravity="right"
+                        android:text="Average check: 900 руб."/>
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_zhig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="4dp"
+                >
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp">
+                    <TextView
+                        android:id="@+id/tv_bar_name_zhig"
+                        android:text="Zhiguli"
+                        android:textSize="40sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="right"
+                        />
+                    <TextView
+                        android:id="@+id/description_zhig"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_bar_name_zhig"
+                        android:gravity="right"
+                        android:text="The best car in the world is Zhiguli. So as bar."/>
+                    <TextView
+                        android:id="@+id/tv_avg_check_zhig"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/description_zhig"
+                        android:gravity="right"
+                        android:text="Среднйи чек: 200 руб."/>
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
