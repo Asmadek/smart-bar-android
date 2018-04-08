@@ -15,15 +15,17 @@ public class DesicionActivity extends Activity implements View.OnClickListener{
 
     private Bundle bundle;
     private ChatFragment chatFragment;
-    private Button bars, alcotrip;
+    private Button bars, alcotrip, friends;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_decision);
         bars = findViewById(R.id.btn_bars);
         alcotrip = findViewById(R.id.btn_alcotrip);
+        friends = findViewById(R.id.btn_friends);
         bars.setOnClickListener(this);
         alcotrip.setOnClickListener(this);
+        friends.setOnClickListener(this);
         bundle = new Bundle();
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -44,7 +46,7 @@ public class DesicionActivity extends Activity implements View.OnClickListener{
         Intent intent;
         switch (v.getId()){
             case R.id.btn_bars:
-                chatFragment.addMessage(composeBundle(1, "you"), "Bars!");
+                chatFragment.addMessage(composeBundle(1, "you"), "По барам!");
                 intent = new Intent(this, BarActivity.class);
                 intent.putExtra("log", chatFragment.getMessageList());
                 startActivity(intent);
@@ -52,6 +54,12 @@ public class DesicionActivity extends Activity implements View.OnClickListener{
             case R.id.btn_alcotrip:
                 chatFragment.addMessage(composeBundle(1, "you"), "Alcotrip!");
                 intent = new Intent(this, AlcoActivity.class);
+                intent.putExtra("log", chatFragment.getMessageList());
+                startActivity(intent);
+                break;
+            case R.id.btn_friends:
+                chatFragment.addMessage(composeBundle(1, "you"), "Надо кого-то позвать");
+                intent = new Intent(this, FriendsActivity.class);
                 intent.putExtra("log", chatFragment.getMessageList());
                 startActivity(intent);
                 break;

@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.TaxiActivity">
-
+    tools:context=".Activity.FriendsActivity">
     <android.support.constraint.Guideline
-        android:id="@+id/guidline_taxi_top"
+        android:id="@+id/guidline_friends_top"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5"/>
+        app:layout_constraintGuide_percent="0.3"/>
 
     <android.support.constraint.Guideline
-        android:id="@+id/guidline_taxi_bottom"
+        android:id="@+id/guidline_friends_bottom"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
@@ -28,7 +27,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/guidline_taxi_top"
+        app:layout_constraintBottom_toBottomOf="@id/guidline_friends_top"
         app:cardCornerRadius="8dp"
         android:elevation="8dp"
         android:layout_marginLeft="8dp"
@@ -50,8 +49,8 @@
         android:id="@+id/taxi_description"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guidline_taxi_top"
-        app:layout_constraintBottom_toBottomOf="@id/guidline_taxi_bottom"
+        app:layout_constraintTop_toTopOf="@id/guidline_friends_top"
+        app:layout_constraintBottom_toBottomOf="@id/guidline_friends_bottom"
         app:cardCornerRadius="8dp"
         android:elevation="8dp"
         android:layout_marginLeft="8dp"
@@ -59,43 +58,29 @@
         android:layout_marginVertical="8dp"
         >
 
-    <android.support.v7.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="#000000"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            android:text="Откуда: Университетская 1"/>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="#000000"
+                    <CheckBox android:id="@+id/checkbox_meat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Алексей Бандура"/>
+                    <CheckBox android:id="@+id/checkbox_cheese"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Галиева Диляра"/>
+                </LinearLayout>
 
-            android:text="Куда: Бар 108 (Спортивная 108)"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="#000000"
 
-            android:text="Подача: 5 минут"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="40sp"
-
-            android:text="50₽"/>
-
-    </android.support.v7.widget.LinearLayoutCompat>
+        </LinearLayout>
 
     </android.support.v7.widget.CardView>
 
@@ -106,7 +91,7 @@
         app:layout_constraintRight_toLeftOf="@+id/card_decision2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="@id/guidline_taxi_bottom"
+        app:layout_constraintTop_toTopOf="@id/guidline_friends_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         android:elevation="8dp"
         app:cardCornerRadius="8dp"
@@ -114,14 +99,11 @@
         android:layout_marginLeft="4dp"
         android:layout_marginVertical="8dp">
         <Button
-            android:id="@+id/btn_with_taxi"
+            android:id="@+id/btn_call_friends"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="ПОЕХАЛИ!"
-            android:background="#ffffff"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            />
+            android:text="Позвать!"
+            android:background="#ffffff"/>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
@@ -130,20 +112,17 @@
         app:layout_constraintLeft_toRightOf="@+id/card_decision1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="@id/guidline_taxi_bottom"
+        app:layout_constraintTop_toTopOf="@id/guidline_friends_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         android:elevation="8dp"
         app:cardCornerRadius="8dp"
         android:layout_margin="8dp">
         <Button
-            android:id="@+id/btn_without_taxi"
+            android:id="@+id/btn_back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Я сам"
-            android:background="#ffffff"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-        />
+            android:text="Я передумал"
+            android:background="#ffffff"/>
     </android.support.v7.widget.CardView>
 
 </android.support.constraint.ConstraintLayout>
