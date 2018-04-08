@@ -51,13 +51,13 @@ public class TaxiActivity extends Activity implements View.OnClickListener{
         switch (v.getId()){
             case R.id.btn_with_taxi:
                 chatFragment.addMessage(composeBundle(1, "you"), "ПОЕХАЛИ!");
-                intent = new Intent(this, BarActivity.class);
+                intent = new Intent(this, DrinkActivity.class);
                 intent.putExtra("log", chatFragment.getMessageList());
                 startActivity(intent);
                 break;
             case R.id.btn_without_taxi:
                 chatFragment.addMessage(composeBundle(1, "you"), "Я сам");
-                intent = new Intent(this, BarActivity.class);
+                intent = new Intent(this, DrinkActivity.class);
                 intent.putExtra("log", chatFragment.getMessageList());
                 startActivity(intent);
                 break;

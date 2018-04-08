@@ -10,11 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.innopolis.zelenyichai.smartbar.Activity.TaxiActivity;
+import com.innopolis.zelenyichai.smartbar.BaseMessage;
 import com.innopolis.zelenyichai.smartbar.R;
+
+import java.util.ArrayList;
 
 public class BarListFragment extends Fragment implements View.OnClickListener{
 
-    CardView cardView;
+    private CardView cardView;
+
+
+    ArrayList<BaseMessage> messageList = new ArrayList<>();
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,9 +41,18 @@ public class BarListFragment extends Fragment implements View.OnClickListener{
         cardView.setOnClickListener(this);
     }
 
+    public void setMessageList(ArrayList<BaseMessage> messageList) {
+        this.messageList = messageList;
+    }
+
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(getActivity(), TaxiActivity.class);
+        BaseMessage baseMessage = new BaseMessage();
+        baseMessage.setSender("you");
+        baseMessage.setMessage("В 108!");
+        messageList.add(baseMessage);
+        intent.putExtra("log", messageList);
         startActivity(intent);
 
     }

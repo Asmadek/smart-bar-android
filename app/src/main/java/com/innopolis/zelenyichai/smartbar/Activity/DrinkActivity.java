@@ -10,12 +10,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.innopolis.zelenyichai.smartbar.BaseMessage;
 import com.innopolis.zelenyichai.smartbar.Fragment.ChatFragment;
 import com.innopolis.zelenyichai.smartbar.Fragment.DrinksFragment;
 import com.innopolis.zelenyichai.smartbar.R;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.ArrayList;
 
 import static android.view.Gravity.CENTER;
 
@@ -39,9 +41,11 @@ public class DrinkActivity extends Activity implements View.OnClickListener {
         buildDrinks();
 
         chatFragment = new ChatFragment();
-        fragmentTransaction.add(R.id.fragment_chat, chatFragment);
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.fragment_bar_chat, chatFragment);
         fragmentTransaction.commit();
-        chatFragment.addMessage(getIntent().getExtras(), "I recommend you the Long Island cocktail");
+        chatFragment.addMessages((ArrayList<BaseMessage>)getIntent().getExtras().getSerializable("log"));
+        chatFragment.addMessage(getIntent().getExtras(), "Let us start with my signature cocktail: Tesla Rocket");
     }
 
     private void buildDrinks() {
