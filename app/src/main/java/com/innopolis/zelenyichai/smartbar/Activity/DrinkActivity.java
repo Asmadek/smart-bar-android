@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.innopolis.zelenyichai.smartbar.Fragment.ChatFragment;
+import com.innopolis.zelenyichai.smartbar.Fragment.DrinksFragment;
 import com.innopolis.zelenyichai.smartbar.R;
 
 public class DrinkActivity extends Activity implements View.OnClickListener {
@@ -27,12 +28,19 @@ public class DrinkActivity extends Activity implements View.OnClickListener {
         bundle = new Bundle();
 
         fragmentManager = getFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
+        buildDrinks();
 
         chatFragment = new ChatFragment();
         fragmentTransaction.add(R.id.fragment_chat, chatFragment);
         fragmentTransaction.commit();
         chatFragment.addMessage(getIntent().getExtras(), "I recommend you the Long Island cocktail");
+    }
+
+    private void buildDrinks() {
+        fragmentTransaction = fragmentManager.beginTransaction();
+        DrinksFragment drinksFragment = new DrinksFragment();
+        fragmentTransaction.add(R.id.fragment_drinks, drinksFragment);
+        fragmentTransaction.commit();
     }
 
     @Override
