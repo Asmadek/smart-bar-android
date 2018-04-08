@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.innopolis.zelenyichai.smartbar.BaseMessage;
+import com.innopolis.zelenyichai.smartbar.Fragment.BarListFragment;
 import com.innopolis.zelenyichai.smartbar.Fragment.ChatFragment;
 import com.innopolis.zelenyichai.smartbar.R;
 
@@ -40,9 +41,25 @@ public class BarActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+        FragmentManager fragmentManager;
+        FragmentTransaction fragmentTransaction;
+        BarListFragment barListFragment;
         switch (v.getId()){
             case R.id.btn_list:
                 findViewById(R.id.image_barmap).animate().alpha(0.0f).setDuration(500);
+                fragmentManager = this.getFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                barListFragment = new BarListFragment();
+                fragmentTransaction.add(R.id.fragment_bar_list, barListFragment);
+                fragmentTransaction.commit();
+                break;
+            case R.id.btn_map:
+                fragmentManager = this.getFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                barListFragment = new BarListFragment();
+                fragmentTransaction.remove(barListFragment);
+                fragmentTransaction.commit();
+                findViewById(R.id.image_barmap).setVisibility(View.VISIBLE);
         }
     }
 }

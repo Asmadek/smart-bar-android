@@ -57,6 +57,15 @@
             android:src="@drawable/barmap"
             android:adjustViewBounds="true"
             android:scaleType="center"
+            android:visibility="gone"
+            />
+
+        <fragment
+            android:id="@+id/fragment_bar_list"
+            android:name="com.innopolis.zelenyichai.smartbar.Fragment.BarListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
             />
     </android.support.v7.widget.CardView>
 
