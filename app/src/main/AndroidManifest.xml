@@ -17,12 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.DesicionActivity">
-
-        </activity>
-
-        <activity android:name=".Activity.BarActivity"></activity>
-        <activity android:name=".Activity.AlcotripActivity"></activity>
+        <activity android:name=".Activity.DesicionActivity"></activity>
+        <activity android:name=".Activity.BarActivity" />
+        <activity android:name=".Activity.AlcotripActivity" />
         <activity android:name=".Activity.TaxiActivity"></activity>
     </application>
 
