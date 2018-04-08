@@ -24,9 +24,10 @@ public class StartActivity extends Activity {
 
     }
 
-    private Bundle composeBundle(String name, int imageId){
+    private Bundle composeBundle(String name, int imageId, String description){
         bundle.putString("name", name);
         bundle.putInt("imageId", imageId);
+        bundle.putString("description", description);
         return bundle;
     }
 
@@ -34,19 +35,19 @@ public class StartActivity extends Activity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         assistentFragment = new AssistentFragment();
-        assistentFragment.setArguments(composeBundle("Илон Маск", R.mipmap.elon_round));
+        assistentFragment.setArguments(composeBundle("Илон Маск", R.mipmap.elon_round, "Космическое пойло"));
         fragmentTransaction.add(R.id.fragment_assistant1, assistentFragment);
         fragmentTransaction.commit();
 
         fragmentTransaction = fragmentManager.beginTransaction();
         assistentFragment = new AssistentFragment();
-        assistentFragment.setArguments(composeBundle("Дейнерис Таргариен", R.mipmap.deyneris_round));
+        assistentFragment.setArguments(composeBundle("Дейнерис Таргариен", R.mipmap.deyneris_round, "Лучшие коктейли Вестероса"));
         fragmentTransaction.add(R.id.fragment_assistant2, assistentFragment);
         fragmentTransaction.commit();
 
         fragmentTransaction = fragmentManager.beginTransaction();
         assistentFragment = new AssistentFragment();
-        assistentFragment.setArguments(composeBundle("Зайка Побухайка", R.mipmap.zayac_round));
+        assistentFragment.setArguments(composeBundle("Зайка Побухайка", R.mipmap.zayac_round, "Дешевле не придумаешь"));
         fragmentTransaction.add(R.id.fragment_assistant3, assistentFragment);
         fragmentTransaction.commit();
     }

@@ -14,29 +14,28 @@ import com.innopolis.zelenyichai.smartbar.R;
 
 import java.util.ArrayList;
 
-public class TaxiActivity extends Activity implements View.OnClickListener{
+public class FriendsActivity extends Activity implements View.OnClickListener{
 
     private Bundle bundle;
     private ChatFragment chatFragment;
-    private Button withTaxi, withoutTaxi;
+    private Button callFriends, back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_taxi);
+        setContentView(R.layout.activity_friends);
 
-        withTaxi = findViewById(R.id.btn_with_taxi);
-        withoutTaxi = findViewById(R.id.btn_without_taxi);
-        withTaxi.setOnClickListener(this);
-        withoutTaxi.setOnClickListener(this);
+        callFriends = findViewById(R.id.btn_call_friends);
+        back = findViewById(R.id.btn_back);
+        callFriends.setOnClickListener(this);
+        back.setOnClickListener(this);
 
         bundle = new Bundle();
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         chatFragment = new ChatFragment();
         fragmentTransaction.add(R.id.fragment_chat, chatFragment);
-        fragmentTransaction.commit();
         chatFragment.addMessages((ArrayList<BaseMessage>) getIntent().getExtras().getSerializable("log"));
-        chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Elon Mask"), "Может закажем такси?");
+        fragmentTransaction.commit();
     }
 
     private Bundle composeBundle(int id, String name){
@@ -46,22 +45,25 @@ public class TaxiActivity extends Activity implements View.OnClickListener{
     }
 
     @Override
+    public void onResume() {
+        super.onResume();  // Always call the superclass method first
+
+        chatFragment.addMessages((ArrayList<BaseMessage>) getIntent().getExtras().getSerializable("log"));
+    }
+
+    @Override
     public void onClick(View v) {
         Intent intent;
-        switch (v.getId()){
-            case R.id.btn_with_taxi:
-                chatFragment.addMessage(composeBundle(1, "you"), "ПОЕХАЛИ!");
-                intent = new Intent(this, DrinkActivity.class);
+        switch (v.getId()) {
+            case R.id.btn_call_friends:
+                chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Elon Mask"), "Алексей Бандура будет ждать тебя в баре!");
+                intent = new Intent(this, DesicionActivity.class);
                 intent.putExtra("log", chatFragment.getMessageList());
                 startActivity(intent);
                 break;
-            case R.id.btn_without_taxi:
-                chatFragment.addMessage(composeBundle(1, "you"), "Я сам");
-                intent = new Intent(this, DrinkActivity.class);
-                intent.putExtra("log", chatFragment.getMessageList());
-                startActivity(intent);
+            case R.id.btn_back:
+                finish();
                 break;
         }
     }
-
 }

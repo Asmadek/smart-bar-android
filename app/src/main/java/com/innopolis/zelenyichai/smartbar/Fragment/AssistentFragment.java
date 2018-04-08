@@ -16,9 +16,9 @@ import com.innopolis.zelenyichai.smartbar.R;
 public class AssistentFragment extends Fragment implements View.OnClickListener {
 
     private ImageView imageView;
-    private TextView textView;
+    private TextView textView, mDescription;
     private int imageId;
-    private String assistantName;
+    private String assistantName, assistentDescription;
 
     @Nullable
     @Override
@@ -32,14 +32,17 @@ public class AssistentFragment extends Fragment implements View.OnClickListener 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         imageView = view.findViewById(R.id.image_portrait);
         textView = view.findViewById(R.id.tv_assistant_name);
+        mDescription = view.findViewById(R.id.tv_assistant_description);
         imageView.setImageResource(imageId);
         textView.setText(assistantName);
+        mDescription.setText(assistentDescription);
     }
 
     @Override
     public void setArguments(Bundle args) {
         imageId = args.getInt("imageId");
         assistantName = args.getString("name");
+        assistentDescription = args.getString("description");
     }
 
     @Override

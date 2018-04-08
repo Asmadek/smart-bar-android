@@ -21,6 +21,7 @@
         <activity android:name=".Activity.AlcotripActivity" />
         <activity android:name=".Activity.TaxiActivity" />
         <activity android:name=".Activity.DrinkActivity" />
+        <activity android:name=".Activity.FriendsActivity"></activity>
         <activity android:name=".Activity.UserProfileActivity"></activity>
     </application>
 
