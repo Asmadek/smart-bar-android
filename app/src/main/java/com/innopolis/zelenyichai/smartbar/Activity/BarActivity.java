@@ -1,5 +1,6 @@
 package com.innopolis.zelenyichai.smartbar.Activity;
 
+import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
@@ -13,7 +14,7 @@ import com.innopolis.zelenyichai.smartbar.R;
 
 import java.util.ArrayList;
 
-public class BarActivity extends AppCompatActivity implements View.OnClickListener{
+public class BarActivity extends Activity implements View.OnClickListener{
 
     private Bundle bundle;
     private ChatFragment chatFragment;
