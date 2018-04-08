@@ -4,4 +4,6 @@
     <string name="btn_action_alcotrip">АЛКОТРИП</string>
     <string name="btn_view_map">Карта</string>
     <string name="btn_view_list">Список</string>
+    <string name="btn_order">Order</string>
+    <string name="default_amount">0 rub.</string>
 </resources>
