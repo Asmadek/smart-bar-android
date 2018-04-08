@@ -48,4 +48,9 @@ public class ChatFragment extends Fragment {
     public ArrayList<BaseMessage> getMessageList() {
         return messageList;
     }
+
+    public void addMessages(ArrayList<BaseMessage> log) {
+        messageList = log;
+        mMessageAdapter.notifyDataSetChanged();
+    }
 }

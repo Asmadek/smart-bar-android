@@ -15,7 +15,7 @@ public class DesicionActivity extends Activity implements View.OnClickListener{
 
     private Bundle bundle;
     private ChatFragment chatFragment;
-    Button bars, alcotrip;
+    private Button bars, alcotrip;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -2,7 +2,8 @@
 <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
     <android.support.constraint.Guideline
         android:id="@+id/guidline_bar_top"
@@ -18,16 +19,25 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.9"/>
 
-    <fragment
-        android:id="@+id/fragment_bar_chat"
-        android:name="com.innopolis.zelenyichai.smartbar.Fragment.ChatFragment"
+    <android.support.v7.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/guidline_bar_top"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardCornerRadius="8dp"
+        android:elevation="8dp"
+        android:layout_margin="8dp"
+        >
+        <fragment
+            android:id="@+id/fragment_bar_chat"
+            android:name="com.innopolis.zelenyichai.smartbar.Fragment.ChatFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+    </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
         android:layout_width="0dp"
@@ -36,11 +46,12 @@
         app:layout_constraintBottom_toBottomOf="@id/guidline_bar_bottom"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:cardCornerRadius="16dp"
+        app:cardCornerRadius="8dp"
         android:elevation="8dp"
         android:layout_margin="8dp"
         >
         <ImageView
+            android:id="@+id/image_barmap"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/barmap"
@@ -59,12 +70,12 @@
         app:layout_constraintTop_toTopOf="@id/guidline_bar_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         android:elevation="8dp"
-        app:cardCornerRadius="16dp"
+        app:cardCornerRadius="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="4dp"
         android:layout_marginVertical="8dp">
         <Button
-            android:id="@+id/btn_bars"
+            android:id="@+id/btn_map"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Map"
@@ -83,7 +94,7 @@
         app:cardCornerRadius="8dp"
         android:layout_margin="8dp">
         <Button
-            android:id="@+id/btn_alcotrip"
+            android:id="@+id/btn_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="List"
