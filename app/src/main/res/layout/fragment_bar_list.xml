@@ -18,11 +18,15 @@
                 android:elevation="8dp"
                 app:cardCornerRadius="8dp"
                 android:layout_margin="4dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+
                 >
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    >
                     <TextView
                         android:id="@+id/tv_bar_name_108"
                         android:text="Bar 108"
@@ -60,11 +64,15 @@
                 android:elevation="8dp"
                 app:cardCornerRadius="8dp"
                 android:layout_margin="4dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+
                 >
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    >
                     <TextView
                         android:id="@+id/tv_bar_name_trinity"
                         android:text="Trinity Pub"
@@ -102,11 +110,15 @@
                 android:elevation="8dp"
                 app:cardCornerRadius="8dp"
                 android:layout_margin="4dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+
                 >
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    >
                     <TextView
                         android:id="@+id/tv_bar_name_ny"
                         android:text="Harry's NY Bar"
@@ -148,7 +160,10 @@
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp">
+                    android:layout_margin="8dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    >
                     <TextView
                         android:id="@+id/tv_bar_name_zhig"
                         android:text="Zhiguli"

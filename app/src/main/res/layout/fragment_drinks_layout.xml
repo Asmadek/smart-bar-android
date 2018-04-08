@@ -19,10 +19,15 @@
                 android:layout_margin="4dp"
                 app:cardCornerRadius="8dp"
                 android:elevation="8dp"
-                app:cardBackgroundColor="#C8E6C9">
+                app:cardBackgroundColor="#C8E6C9"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+
+                >
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    >
                     <android.support.constraint.Guideline
                         android:id="@+id/longisland_guid"
                         android:layout_width="wrap_content"
