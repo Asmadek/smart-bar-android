@@ -65,7 +65,7 @@
                         app:layout_constraintTop_toBottomOf="@id/longisland_name"
                         app:layout_constraintLeft_toLeftOf="@id/longisland_guid"
                         app:layout_constraintRight_toRightOf="parent"
-                        android:text="Typically made with vodka, tequila, light rum, triple sec, gin, and a splash of cola, which gives the drink the same amber hue as its namesake"
+                        android:text="популярный коктейль на основе водки, джина, текилы и рома."
                         android:textSize="12sp"/>
                 </android.support.constraint.ConstraintLayout>
             </android.support.v7.widget.CardView>
@@ -118,7 +118,7 @@
                         app:layout_constraintTop_toBottomOf="@id/wcola_name"
                         app:layout_constraintLeft_toLeftOf="@id/wcola_guid"
                         app:layout_constraintRight_toRightOf="parent"
-                        android:text="Cocktail made with Jack Daniel's whiskey and Coca-Cola"
+                        android:text="Этот коктейль не имеет ни даты рождения, ни достоверной истории. Происхождение названия тоже непонятно."
                         android:textSize="12sp"/>
                 </android.support.constraint.ConstraintLayout>
             </android.support.v7.widget.CardView>
@@ -171,7 +171,7 @@
                         app:layout_constraintTop_toBottomOf="@id/moji_name"
                         app:layout_constraintLeft_toLeftOf="@id/moji_guid"
                         app:layout_constraintRight_toRightOf="parent"
-                        android:text="Mojito is a traditional Cuban highball. Traditionally, a mojito is a cocktail that consists of five ingredients: white rum, sugar, lime juice, soda water, and mint."
+                        android:text="Мохито традиционно состоит из четырёх ингредиентов: газированная вода, сахар, лайм и мята."
                         android:textSize="12sp"/>
                 </android.support.constraint.ConstraintLayout>
             </android.support.v7.widget.CardView>
@@ -225,7 +225,7 @@
                         app:layout_constraintTop_toBottomOf="@id/vmar_name"
                         app:layout_constraintLeft_toLeftOf="@id/vmar_guid"
                         app:layout_constraintRight_toRightOf="parent"
-                        android:text="The killer cocktail for parties, it's licensed to thrill."
+                        android:text="Очередной коктейль, придуманный главным героем книг Яна Флеминга Джеймсом Бондом."
                         android:textSize="12sp"/>
                 </android.support.constraint.ConstraintLayout>
             </android.support.v7.widget.CardView>
@@ -278,7 +278,7 @@
                         app:layout_constraintTop_toBottomOf="@id/pc_name"
                         app:layout_constraintLeft_toLeftOf="@id/pc_guid"
                         app:layout_constraintRight_toRightOf="parent"
-                        android:text="традиционный карибский алкогольный коктейль на основе светлого рома, с кокосовым молоком и ананасовым соком. "
+                        android:text="Традиционный карибский алкогольный коктейль на основе светлого рома, с кокосовым молоком и ананасовым соком. "
                         android:textSize="12sp"/>
                 </android.support.constraint.ConstraintLayout>
             </android.support.v7.widget.CardView>

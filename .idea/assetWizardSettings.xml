@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="87" />
+                                                <entry key="scalingPercent" value="74" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -33,9 +33,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundImage" value="C:\Users\mjazz\Downloads\Telegram Desktop\rocket.jpg" />
-                                      <entry key="foregroundImage" value="C:\Users\mjazz\Downloads\Telegram Desktop\vmar.jpg" />
-                                      <entry key="outputName" value="vmar" />
+                                      <entry key="backgroundImage" value="C:\Users\mjazz\Downloads\Telegram Desktop\Рик.png" />
+                                      <entry key="foregroundImage" value="C:\Users\mjazz\Downloads\Telegram Desktop\Рик.png" />
+                                      <entry key="outputName" value="rick" />
                                     </map>
                                   </option>
                                 </PersistentState>

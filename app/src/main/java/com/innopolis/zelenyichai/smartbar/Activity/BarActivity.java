@@ -23,7 +23,6 @@ public class BarActivity extends Activity implements View.OnClickListener{
     private Bundle bundle;
     private ChatFragment chatFragment;
     private Button map, list;
-    private CardView cardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +40,8 @@ public class BarActivity extends Activity implements View.OnClickListener{
         fragmentTransaction.commit();
         chatFragment.addMessages((ArrayList<BaseMessage>) getIntent().getExtras().getSerializable("log"));
         chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Илон Маск"), "В какой бар пойдем?");
-        cardView = findViewById(R.id.barlist_card);
         BarListFragment barListFragment = (BarListFragment) fragmentManager.findFragmentById(R.id.fragment_bar_list);
         barListFragment.setMessageList(chatFragment.getMessageList());
-        cardView.setOnClickListener(this);
-
     }
 
     @Override
@@ -55,26 +51,28 @@ public class BarActivity extends Activity implements View.OnClickListener{
         BarListFragment barListFragment;
 
         switch (v.getId()){
-            case R.id.barlist_card:
-                Intent intent = new Intent(this, TaxiActivity.class);
-                intent.putExtra("log", chatFragment.getMessageList());
-                startActivity(intent);
-                break;
+
             case R.id.btn_list:
-                findViewById(R.id.image_barmap).animate().alpha(0.0f).setDuration(500);
+                findViewById(R.id.image_barmap).animate().alpha(0.0f);
+                findViewById(R.id.image_barmap).setVisibility(View.INVISIBLE);
                 fragmentManager = this.getFragmentManager();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                barListFragment = new BarListFragment();
-                fragmentTransaction.add(R.id.fragment_bar_list, barListFragment);
+                fragmentTransaction = fragmentManager
+                        .beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
+                barListFragment = (BarListFragment) fragmentManager.findFragmentById(R.id.fragment_bar_list);
+                fragmentTransaction.show(barListFragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.btn_map:
                 fragmentManager = this.getFragmentManager();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                barListFragment = new BarListFragment();
-                fragmentTransaction.remove(barListFragment);
+                fragmentTransaction = fragmentManager
+                        .beginTransaction()
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
+                barListFragment = (BarListFragment) fragmentManager.findFragmentById(R.id.fragment_bar_list);
+                fragmentTransaction.hide(barListFragment);
                 fragmentTransaction.commit();
                 findViewById(R.id.image_barmap).setVisibility(View.VISIBLE);
+                findViewById(R.id.image_barmap).animate().alpha(1.0f);
                 break;
         }
 
