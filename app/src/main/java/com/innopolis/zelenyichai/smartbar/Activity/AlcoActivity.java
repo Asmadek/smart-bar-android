@@ -28,15 +28,11 @@ public class AlcoActivity extends Activity {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction;
         fragmentTransaction = fragmentManager.beginTransaction();
-        AlcoFragment alcoFragment= new AlcoFragment();
-        fragmentTransaction.add(R.id.fragment_alco, alcoFragment);
-        fragmentTransaction.commit();
-        fragmentTransaction = fragmentManager.beginTransaction();
         chatFragment = new ChatFragment();
         fragmentTransaction.add(R.id.fragment_alco_chat, chatFragment);
         fragmentTransaction.commit();
         chatFragment.addMessages((ArrayList<BaseMessage>) getIntent().getExtras().getSerializable("log"));
-        chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Elon Mask"), "Choose your way wisely, my friend!");
+        chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Илон Маск"), "Выбирай свой путь с умом, мой друг!");
     }
     private Bundle composeBundle(int id, String name){
         bundle.putInt("id", id);

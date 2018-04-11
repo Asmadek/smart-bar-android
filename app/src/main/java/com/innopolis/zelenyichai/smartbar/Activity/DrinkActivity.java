@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 import static android.view.Gravity.CENTER;
 
-public class DrinkActivity extends Activity implements View.OnClickListener {
+public class DrinkActivity extends Activity {
 
     private Bundle bundle;
     private ChatFragment chatFragment;
@@ -49,16 +49,6 @@ public class DrinkActivity extends Activity implements View.OnClickListener {
     private void buildDrinks() {
         DrinksFragment drinksFragment = (DrinksFragment) fragmentManager.findFragmentById(R.id.fragment_drinks);
         drinksFragment.setMessageList(chatFragment.getMessageList());
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_order:
-                chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Илон Маск"), "Отличный выбор!");
-                chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Илон Маск"), "Полёт нормальный :)");
-                break;
-        }
     }
 
     private void showOrderMessage(final String message) {

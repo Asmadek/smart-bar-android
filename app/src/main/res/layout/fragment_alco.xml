@@ -4,90 +4,152 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <android.support.v7.widget.CardView
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="4dp"
-            android:layout_margin="4dp"
-            app:cardCornerRadius="8dp"
-            android:elevation="8dp"
-            app:cardBackgroundColor="@color/orange">
-            <LinearLayout
+            android:layout_height="match_parent">
+            
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_trop"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:text="Booze Mars Trip"
-                    android:textColor="#000000"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Special Track from Elon Musk. Mostly sweet and sour cocktails, from classics to modernity."/>
-            </LinearLayout>
+                android:layout_height="200dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="8dp"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/trop"
+                    android:scaleType="fitXY"
+                    />
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_bot_top"
+                    >
+                    <TextView
+                        android:id="@+id/tropics_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Тропический вояж"
+                        android:textColor="#ffffff"
+                        app:layout_constraintBottom_toTopOf="@id/tropics_desc"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:textSize="24sp"
+                        android:layout_margin="16dp"/>
+                    <TextView
+                        android:id="@+id/tropics_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:text="Все лучшие освежающие коктейли города ждут тебя здесь. Прокатись на волне Мохито и Пина Колады!"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp"
+                        android:layout_margin="16dp"
+                        android:gravity="right"/>
+                </android.support.constraint.ConstraintLayout>
 
-        </android.support.v7.widget.CardView>
+            </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="4dp"
-            android:layout_margin="4dp"
-            app:cardCornerRadius="8dp"
-            android:elevation="8dp"
-            app:cardBackgroundColor="@color/green">
-            <LinearLayout
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_mars"
+                app:layout_constraintTop_toBottomOf="@id/card_trop"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:text="Tropic desire"
-                    android:textColor="#000000"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Best refreshing tropical cocktails can be found here. All you need to know."/>
-            </LinearLayout>
+                android:layout_height="200dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp"
+                android:layout_margin="8dp"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/mars"
+                    android:scaleType="fitXY"
+                    />
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_bot_top"
+                    >
+                    <TextView
+                        android:id="@+id/mars_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Хроники Марса"
+                        android:textColor="#ffffff"
+                        app:layout_constraintBottom_toTopOf="@id/mars_desc"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:textSize="24sp"
+                        android:layout_margin="16dp"/>
+                    <TextView
+                        android:id="@+id/mars_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:text="Самые новые и необычные коктейли. Взрывные комбинации, опустошенные стаканы и мысли о вселенной..."
+                        android:textColor="#ffffff"
+                        android:textSize="16sp"
+                        android:layout_margin="16dp"
+                        android:gravity="right"/>
+                </android.support.constraint.ConstraintLayout>
 
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="4dp"
-            android:layout_margin="4dp"
-            app:cardCornerRadius="8dp"
-            android:elevation="8dp"
-            app:cardBackgroundColor="@color/colorAccent">
-            <LinearLayout
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_whis"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:text="Whisky Track"
-                    android:textColor="#000000"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Track for whisky lovers. Try the best vhisky in your city and taste the most classic cocktail - Old Fashioned. "/>
-            </LinearLayout>
+                android:layout_height="200dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintTop_toBottomOf="@id/card_mars"
+                android:layout_margin="8dp"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/whis"
+                    android:scaleType="fitXY"
+                    />
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_bot_top_hard"
+                    >
+                    <TextView
+                        android:id="@+id/whis_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Виски Кроул"
+                        android:textColor="#ffffff"
+                        app:layout_constraintBottom_toTopOf="@id/whis_desc"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:textSize="24sp"
+                        android:layout_margin="16dp"/>
+                    <TextView
+                        android:id="@+id/whis_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:text="Всё лучшее связанное с виски. На камнях или Old-Fashioned - решать тебе."
+                        android:textColor="#ffffff"
+                        android:textSize="16sp"
+                        android:layout_margin="16dp"
+                        android:gravity="right"/>
+                </android.support.constraint.ConstraintLayout>
 
-        </android.support.v7.widget.CardView>
+            </android.support.v7.widget.CardView>
+            
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
-
-    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
