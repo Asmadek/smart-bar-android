@@ -50,7 +50,7 @@ public class BarListFragment extends Fragment implements View.OnClickListener{
         Intent intent = new Intent(getActivity(), TaxiActivity.class);
         BaseMessage baseMessage = new BaseMessage();
         baseMessage.setSender("you");
-        baseMessage.setMessage("В 108!");
+        baseMessage.setMessage("В bar108!");
         messageList.add(baseMessage);
         intent.putExtra("log", messageList);
         startActivity(intent);

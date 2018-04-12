@@ -33,7 +33,7 @@ public class FriendsActivity extends Activity implements View.OnClickListener{
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         chatFragment = new ChatFragment();
-        fragmentTransaction.add(R.id.fragment_chat, chatFragment);
+        fragmentTransaction.add(R.id.fragment_chat_desicion, chatFragment);
         chatFragment.addMessages((ArrayList<BaseMessage>) getIntent().getExtras().getSerializable("log"));
         fragmentTransaction.commit();
     }

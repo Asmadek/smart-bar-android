@@ -18,41 +18,53 @@
                 android:elevation="8dp"
                 app:cardCornerRadius="8dp"
                 android:layout_margin="4dp"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
 
                 >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bar108"
+                    android:scaleType="fitXY"
+                    />
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:background="@drawable/gradient_bot_top"
                     >
                     <TextView
                         android:id="@+id/tv_bar_name_108"
-                        android:text="Bar 108"
-                        android:textSize="40sp"
+                        android:text="Бар 108"
+                        android:textSize="28sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#000000"
-                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"
+                        app:layout_constraintBottom_toTopOf="@id/description_108"
                         android:gravity="right"
+                        android:layout_margin="8dp"
                         />
                     <TextView
                         android:id="@+id/description_108"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toBottomOf="@id/tv_bar_name_108"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@id/tv_avg_check_108"
                         android:gravity="right"
-                        android:text="THE ONLY BAR IN INNOPOLIS"/>
+                        android:textColor="#dfffffff"
+                        android:layout_margin="8dp"
+                        android:text="Ваш любимый бар в самом молодом городе России. Три холодильника крафта, 15 кранов, бургеры и корюшка."/>
+
                     <TextView
                         android:id="@+id/tv_avg_check_108"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toBottomOf="@id/description_108"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         android:gravity="right"
-                        android:text="Average check: 700 руб."/>
+                        android:textColor="#dfffffff"
+                        android:text="Средний чек: 700 руб."
+                        android:layout_margin="8dp"/>
                 </android.support.constraint.ConstraintLayout>
 
             </android.support.v7.widget.CardView>
@@ -64,41 +76,53 @@
                 android:elevation="8dp"
                 app:cardCornerRadius="8dp"
                 android:layout_margin="4dp"
-                android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
 
                 >
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/cultbar"
+                    android:scaleType="fitXY"
+                    />
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:background="@drawable/gradient_bot_top"
                     >
                     <TextView
                         android:id="@+id/tv_bar_name_trinity"
-                        android:text="Trinity Pub"
-                        android:textSize="40sp"
+                        android:text="Культбар"
+                        android:textSize="28sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#000000"
-                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"
+                        app:layout_constraintBottom_toTopOf="@id/description_trinity"
                         android:gravity="right"
+                        android:layout_margin="8dp"
                         />
                     <TextView
                         android:id="@+id/description_trinity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toBottomOf="@id/tv_bar_name_trinity"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@id/tv_avg_check_trinity"
                         android:gravity="right"
-                        android:text="Coziest Irish Pub in Chertanovo"/>
+                        android:textColor="#dfffffff"
+                        android:text="Помимо линейки классических коктейлей с негрони и май-таем, ребята запустили много твистов. В твист на джин-физз они добавляют эссенцию фиалки и лаванды. "
+                        android:layout_margin="8dp"/>
                     <TextView
                         android:id="@+id/tv_avg_check_trinity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toBottomOf="@id/description_trinity"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         android:gravity="right"
-                        android:text="Average check: 1000 руб."/>
+                        android:text="Средний чек: 700 руб."
+                        android:textColor="#dfffffff"
+                        android:layout_margin="8dp"/>
                 </android.support.constraint.ConstraintLayout>
 
             </android.support.v7.widget.CardView>
@@ -108,43 +132,55 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:elevation="8dp"
-                app:cardCornerRadius="8dp"
                 android:layout_margin="4dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="8dp"
                 android:clickable="true"
-
                 >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/genericbar1"
+                    android:scaleType="fitXY"
+                    />
+
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
+                    android:background="@drawable/gradient_bot_top"
                     >
                     <TextView
                         android:id="@+id/tv_bar_name_ny"
-                        android:text="Harry's NY Bar"
-                        android:textSize="40sp"
+                        android:text="Барбар"
+                        android:textSize="28sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#000000"
-                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"
+                        app:layout_constraintBottom_toTopOf="@id/description_ny"
                         android:gravity="right"
+                        android:layout_margin="8dp"
                         />
                     <TextView
                         android:id="@+id/description_ny"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toBottomOf="@id/tv_bar_name_ny"
+                        android:textSize="12sp"
+                        android:textColor="#dfffffff"
+                        app:layout_constraintBottom_toTopOf="@id/tv_avg_check_ny"
                         android:gravity="right"
-                        android:text=" New York-style interior – mahogany panels, college pennants and best booze in Moscow"/>
+                        android:text="БарбарБарбарБарбарБарбарБарбарБарбарБарбарБарбарБарбарБарбарБарбарБарбарБарбар"
+                        android:layout_margin="8dp"/>
+
                     <TextView
                         android:id="@+id/tv_avg_check_ny"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toBottomOf="@id/description_ny"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textColor="#dfffffff"
                         android:gravity="right"
-                        android:text="Average check: 900 руб."/>
+                        android:text="Средний чек: 900 руб."
+                        android:layout_margin="8dp"/>
                 </android.support.constraint.ConstraintLayout>
 
             </android.support.v7.widget.CardView>
@@ -154,42 +190,54 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:elevation="8dp"
-                app:cardCornerRadius="8dp"
+                app:cardCornerRadius="4dp"
                 android:layout_margin="4dp"
                 >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/genericbar2"
+                    android:scaleType="fitXY"
+                    />
+
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@drawable/gradient_bot_top"
                     android:clickable="true"
                     >
                     <TextView
                         android:id="@+id/tv_bar_name_zhig"
-                        android:text="Zhiguli"
-                        android:textSize="40sp"
+                        android:text="Барбар"
+                        android:textSize="28sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#000000"
-                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#ffffff"
+                        app:layout_constraintBottom_toTopOf="@id/description_zhig"
                         android:gravity="right"
+                        android:layout_margin="8dp"
                         />
                     <TextView
                         android:id="@+id/description_zhig"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toBottomOf="@id/tv_bar_name_zhig"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@id/tv_avg_check_zhig"
                         android:gravity="right"
-                        android:text="The best car in the world is Zhiguli. So as bar."/>
+                        android:textColor="#dfffffff"
+                        android:layout_margin="8dp"
+                        android:text="БарбарБарбарБарбарБарбарБарбарБарбарБарбарБарбарБарбарБарбарБарбарБарбарБарбар"/>
                     <TextView
                         android:id="@+id/tv_avg_check_zhig"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        app:layout_constraintTop_toBottomOf="@id/description_zhig"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textColor="#dfffffff"
                         android:gravity="right"
-                        android:text="Среднйи чек: 200 руб."/>
+                        android:text="Среднйи чек: 200 руб."
+                        android:layout_margin="8dp"/>
                 </android.support.constraint.ConstraintLayout>
 
             </android.support.v7.widget.CardView>

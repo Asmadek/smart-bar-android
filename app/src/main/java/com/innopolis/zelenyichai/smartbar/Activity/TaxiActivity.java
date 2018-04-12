@@ -33,7 +33,7 @@ public class TaxiActivity extends Activity implements View.OnClickListener{
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         chatFragment = new ChatFragment();
-        fragmentTransaction.add(R.id.fragment_chat, chatFragment);
+        fragmentTransaction.add(R.id.fragment_chat_desicion, chatFragment);
         fragmentTransaction.commit();
         chatFragment.addMessages((ArrayList<BaseMessage>) getIntent().getExtras().getSerializable("log"));
         chatFragment.addMessage(composeBundle(R.mipmap.elon_round, "Илон Маск"), "Может закажем такси?");

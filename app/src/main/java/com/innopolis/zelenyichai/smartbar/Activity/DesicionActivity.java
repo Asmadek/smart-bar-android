@@ -28,10 +28,7 @@ public class DesicionActivity extends Activity implements View.OnClickListener{
         friends.setOnClickListener(this);
         bundle = new Bundle();
         FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        chatFragment = new ChatFragment();
-        fragmentTransaction.add(R.id.fragment_chat, chatFragment);
-        fragmentTransaction.commit();
+        chatFragment = (ChatFragment) fragmentManager.findFragmentById(R.id.fragment_chat_desicion);
         chatFragment.addMessage(getIntent().getExtras(), "Время для алконауки!");
     }
 
